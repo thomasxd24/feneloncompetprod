@@ -1,0 +1,16 @@
+:TODO LIST
+pivot table at recap
+-careful add competance table adds all competences -hold
+add modifier devoir (21-12) -hold
+add hide column automatic at view devoir -HOLD but getting done
+add automatic changed table recaptulatif at add devoir -hold :modify
+after all this we enter 0.1.1 alpha- ok
+-start consultation section- WORKING ON IT
+partager la modification-hold
+change the goddamn comid
+
+-recap eleve
+-stats d'un devoir ( total competence...)
+
+
+SELECT comid, (SELECT COUNT(note) where note=1) AS input_1, (SELECT COUNT(note) where note=2) AS input_2, (SELECT COUNT(note) where note=3) AS input_3, (SELECT COUNT(note) where note=4) AS input_4 FROM devoir where eleveid=47 GROUP BY comid
