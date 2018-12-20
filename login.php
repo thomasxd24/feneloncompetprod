@@ -4,7 +4,7 @@ include($_SERVER['DOCUMENT_ROOT']."/connection.php");
 $error = "";
 //Variable for storing our errors.
 if ($_GET['error'] == '2') {
-    $error = 'Vous avez créeé un compte avec succes';
+    $error = 'Vous avez créee un compte avec succes';
 }
 if (isset($_POST["submit"])) {
     if (empty($_POST["username"]) || empty($_POST["password"])) {
