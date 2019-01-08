@@ -3,7 +3,7 @@
 include($_SERVER['DOCUMENT_ROOT']."/connection.php");
 if (isset($_GET['d'])) {
     $d = $_GET['d'];
-    $sql = " SELECT eleve.eleveid,eleve.nom,eleve.prenom,eleve.classe,GROUP_CONCAT(devoir.note ORDER BY devoir.comid separator '|') as 'note' FROM devoir INNER JOIN matiere ON matiere.matiereid=devoir.matiereid INNER JOIN eleve ON eleve.eleveid=devoir.eleveid WHERE devoir.wholedevoirid='$d' GROUP BY eleve.eleveid ORDER BY eleve.nom ASC";
+    $sql = " SELECT eleve.eleveid,eleve.nom,eleve.prenom,eleve.class,GROUP_CONCAT(devoir.note ORDER BY devoir.comid separator '|') as 'note' FROM devoir INNER JOIN matiere ON matiere.matiereid=devoir.matiereid INNER JOIN eleve ON eleve.eleveid=devoir.eleveid WHERE devoir.wholedevoirid='$d' GROUP BY eleve.eleveid ORDER BY eleve.nom ASC";
    //echo $sql;
     // a determiner si plusieur peut exister dans un devoir (11/2)??
 
