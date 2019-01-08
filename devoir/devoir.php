@@ -24,6 +24,7 @@ if (isset($_GET['d'])) {
             array_push($data, array_merge($onerow,$newnote));
         }
     } else {
+        echo mysqli_error($db);
         $data=array();
     }
     $table = array(data => $data);
