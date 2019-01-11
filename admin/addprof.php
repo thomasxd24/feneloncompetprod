@@ -22,16 +22,16 @@ if (isset($_POST['nom'])) {
     $password = md5($_POST['password']);
     $sql="INSERT INTO user (username, md5password, name, userType, profid,isAdmin,firstLogin) VALUES ('".$_POST['username']."'','".$password."' ,'".$_POST['nom']."' ,2,".$profid.",2,1)";
     echo $sql;
-    // $result = mysqli_query($db,$sql);
-    // if(!$result)
-    // {g
-    //     $success=mysqli_error($db);
-    // }
-    // else{
-    //     $hi= resultToArray($result);
-    //     var_dump($hi);
-    //     $success="C'est tout bon!!";
-    // }
+    $result = mysqli_query($db,$sql);
+    if(!$result)
+    {g
+        $success=mysqli_error($db);
+    }
+    else{
+        $hi= resultToArray($result);
+        var_dump($hi);
+        $success="C'est tout bon!!";
+    }
    
 }
 ?>
