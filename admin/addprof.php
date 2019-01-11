@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+
 include($_SERVER['DOCUMENT_ROOT']."/connection.php");
 include("../check.php");
 
@@ -93,7 +92,7 @@ if (isset($_GET['query']) {
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#"><?php echo $user_check ?></a>
+                            <a href="#"></a>
                         </li>
                         <li>
                             <a href="/logout.php"><i class="fa fa-sign-out"></i></a>
@@ -152,7 +151,7 @@ if (isset($_GET['query']) {
     <footer class="main-footer">
         <div class="container">
             <div class="pull-right hidden-xs">
-                <b>Version</b> <?php echo $version ?>
+                <b>Version</b>
             </div>
             <strong>Copyright &copy; 2016 <a href="http://fenelon63.fr">Fenelon</a>.</strong> Tout droits réserves
         </div>
