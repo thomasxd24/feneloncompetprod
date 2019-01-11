@@ -13,11 +13,24 @@ function resultToArray($result) {
     }
     return $rows;
 }
-if (isset($_GET['query'])) {
-    $result = mysqli_query($db,$_GET['query']);
-    $hi= resultToArray($result);
-    var_dump($hi);
-    $success="C'est tout bon!!";
+if (isset($_POST['name'])) {
+    $sql="select profid from user order by profid desc limit 1";
+    $result = mysqli_query($db,$sql);
+    $profidar=mysqli_fetch_array($result);
+    $profid=intval($profidar)+1;
+    echo $profid;
+    // $sql="INSERT INTO user (username, md5password, name, userType, profid,isAdmin,firstLogin) VALUES (, , ,2,(select ),2)";
+    // $result = mysqli_query($db,$_GET['query']);
+    // if(!$result)
+    // {
+        // echo mysqli_error($db);
+    // }
+    // else{
+    //     $hi= resultToArray($result);
+    //     var_dump($hi);
+    //     $success="C'est tout bon!!";
+    // }
+   
 }
 ?>
 <!DOCTYPE html>
