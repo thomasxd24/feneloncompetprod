@@ -1,23 +1,24 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+// include($_SERVER['DOCUMENT_ROOT']."/connection.php");
+// include("../check.php");
 
-include($_SERVER['DOCUMENT_ROOT']."/connection.php");
-include("../check.php");
 
+// function resultToArray($result) {
+//     $rows = array();
+//     while($row = $result->fetch_assoc()) {
+//         $rows[] = $row;
+//     }
+//     return $rows;
+// }
 
-function resultToArray($result) {
-    $rows = array();
-    while($row = $result->fetch_assoc()) {
-        $rows[] = $row;
-    }
-    return $rows;
-}
-
-if (isset($_GET['query']) {
-    $result = mysqli_query($db,$_GET['query']);
-    $hi= resultToArray($result);
-    var_dump($hi);
-    $success="C'est tout bon!!";
-}
+// if (isset($_GET['query']) {
+//     $result = mysqli_query($db,$_GET['query']);
+//     $hi= resultToArray($result);
+//     var_dump($hi);
+//     $success="C'est tout bon!!";
+// }
 ?>
 <!DOCTYPE html>
 <html>
@@ -92,7 +93,7 @@ if (isset($_GET['query']) {
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#"></a>
+                            <a href="#"><?php echo $user_check ?></a>
                         </li>
                         <li>
                             <a href="/logout.php"><i class="fa fa-sign-out"></i></a>
@@ -151,7 +152,7 @@ if (isset($_GET['query']) {
     <footer class="main-footer">
         <div class="container">
             <div class="pull-right hidden-xs">
-                <b>Version</b>
+                <b>Version</b> <?php echo $version ?>
             </div>
             <strong>Copyright &copy; 2016 <a href="http://fenelon63.fr">Fenelon</a>.</strong> Tout droits réserves
         </div>
