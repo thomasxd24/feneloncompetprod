@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-// include($_SERVER['DOCUMENT_ROOT']."/connection.php");
-// include("../check.php");
+include($_SERVER['DOCUMENT_ROOT']."/connection.php");
+include("../check.php");
 
 
 // function resultToArray($result) {
