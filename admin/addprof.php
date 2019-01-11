@@ -28,8 +28,6 @@ if (isset($_POST['nom'])) {
         $success=mysqli_error($db);
     }
     else{
-        $hi= resultToArray($result);
-        var_dump($hi);
         $success="C'est tout bon!!";
     }
    
