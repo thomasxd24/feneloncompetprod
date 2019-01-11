@@ -20,11 +20,11 @@ if (isset($_POST['nom'])) {
     $profid=intval($profidar["profid"])+1;
     echo $profid;
     $password = md5($_POST['password']);
-    $sql="INSERT INTO user (username, md5password, name, userType, profid,isAdmin,firstLogin) VALUES (2,1)";
+    $sql="INSERT INTO user (username, md5password, name, userType, profid,isAdmin,firstLogin) VALUES ('$_POST['username']'','$password' ,'$_POST['nom']' ,2,$profid,2,1)";
     echo $sql;
     // $result = mysqli_query($db,$sql);
     // if(!$result)
-    // {
+    // {g
     //     $success=mysqli_error($db);
     // }
     // else{
