@@ -5,20 +5,21 @@ include($_SERVER['DOCUMENT_ROOT']."/connection.php");
 include("../check.php");
 
 
-// function resultToArray($result) {
-//     $rows = array();
-//     while($row = $result->fetch_assoc()) {
-//         $rows[] = $row;
-//     }
-//     return $rows;
-// }
+function resultToArray($result) {
+    $rows = array();
+    while($row = $result->fetch_assoc()) {
+        $rows[] = $row;
+    }
+    return $rows;
+}
 
-// if (isset($_GET['query']) {
-//     $result = mysqli_query($db,$_GET['query']);
-//     $hi= resultToArray($result);
-//     var_dump($hi);
-//     $success="C'est tout bon!!";
-// }
+if (isset($_GET['query']) {
+    // $result = mysqli_query($db,$_GET['query']);
+    // $hi= resultToArray($result);
+    // var_dump($hi);
+    $success="C'est tout bon!!";
+    echo "hi";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -120,7 +121,7 @@ include("../check.php");
                     <h3 class="box-title">Ajouter un Utilisateur</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                <form>
+                <form method="POST" action="addprof.php">
                 <dl class="dl-horizontal center-block" style="width:70%">
                     <br>
                     <dt>Nom</dt>
