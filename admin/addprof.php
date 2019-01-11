@@ -24,7 +24,7 @@ if (isset($_POST['nom'])) {
     echo $sql;
     $result = mysqli_query($db,$sql);
     if(!$result)
-    {g
+    {
         $success=mysqli_error($db);
     }
     else{
