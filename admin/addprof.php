@@ -18,18 +18,18 @@ if (isset($_POST['nom'])) {
     $result = mysqli_query($db,$sql);
     $profidar=mysqli_fetch_array($result);
     $profid=intval($profidar["profid"])+1;
-    echo $profid;
-    // $sql="INSERT INTO user (username, md5password, name, userType, profid,isAdmin,firstLogin) VALUES (, , ,2,(select ),2)";
-    // $result = mysqli_query($db,$_GET['query']);
-    // if(!$result)
-    // {
-        // echo mysqli_error($db);
-    // }
-    // else{
-    //     $hi= resultToArray($result);
-    //     var_dump($hi);
-    //     $success="C'est tout bon!!";
-    // }
+    $password = md5($_POST['password']);
+    $sql="INSERT INTO user (username, md5password, name, userType, profid,isAdmin,firstLogin) VALUES ($_POST['username'],$password ,$_POST['nom'] ,2,$profid,2,1)";
+    $result = mysqli_query($db,$sql);
+    if(!$result)
+    {
+        $success=mysqli_error($db);
+    }
+    else{
+        $hi= resultToArray($result);
+        var_dump($hi);
+        $success="C'est tout bon!!";
+    }
    
 }
 ?>
@@ -134,8 +134,9 @@ if (isset($_POST['nom'])) {
                     <h3 class="box-title">Ajouter un Utilisateur</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-               
+               <?php echo $success; ?>
                 <dl class="dl-horizontal center-block" style="width:70%">
+
                     <br>
                     <dt>Nom</dt>
                     <dd><input type="" class="form-control" id="" placeholder="" name="nom"></dd>
