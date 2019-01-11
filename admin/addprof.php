@@ -12,6 +12,6 @@ ini_set('display_errors', 'On');
     //     echo "Error: " . $sql . "<br>" . mysqli_error($db);
     // }
 
-    $result = mysql_query($db,$sql);
-$row = mysql_fetch_array($result);
+    $result = mysqli_query($db,$sql);
+$row = mysqli_fetch_array($result);
 echo $row;
