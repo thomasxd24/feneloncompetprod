@@ -6,7 +6,7 @@ if($_SESSION['firstLogin'] == "1"){
   $sql = "UPDATE `user` SET `md5password` = '".$md5mdp."', `firstLogin` = '2' WHERE `user`.`userID` = ".$_SESSION['userID']." ";
     $result = mysqli_query($db, $sql);
   $_SESSION['firstLogin'] = "2";
-  header("location: //connexion/firstConnexion/modifieMdp/success.php");
+  header("location: /connexion/firstConnexion/modifieMdp/success.php");
 }
 else {
   header("location: /");
