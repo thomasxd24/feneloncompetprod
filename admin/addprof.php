@@ -3,6 +3,7 @@ include($_SERVER['DOCUMENT_ROOT']."/connection.php");
 include("../check.php");
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
+
 function resultToArray($result) {
     $rows = array();
     while($row = $result->fetch_assoc()) {
@@ -19,11 +20,8 @@ function resultToArray($result) {
     //     echo "Error: " . $sql . "<br>" . mysqli_error($db);
     // }
 echo $_GET['query'];
-    $result = mysqli_query($db,$sql);
-$row = mysqli_fetch_array($result);
-var_dump($row);
 
 $result = mysqli_query($db,$_GET['query']);
-$hi= resultToArray($result)
+$hi= resultToArray($result);
 var_dump($hi);
 
