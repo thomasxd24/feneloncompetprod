@@ -14,12 +14,12 @@ function resultToArray($result) {
     return $rows;
 }
 
-if (isset($_GET['query']) {
-    // $result = mysqli_query($db,$_GET['query']);
-    // $hi= resultToArray($result);
-    // var_dump($hi);
-    // $success="C'est tout bon!!";
-}
+// if (isset($_GET['query']) {
+//     // $result = mysqli_query($db,$_GET['query']);
+//     // $hi= resultToArray($result);
+//     // var_dump($hi);
+//     // $success="C'est tout bon!!";
+// }
 ?>
 <!DOCTYPE html>
 <html>
