@@ -13,7 +13,7 @@ function resultToArray($result) {
     }
     return $rows;
 }
-if (isset($_POST['name'])) {
+if (isset($_POST['nom'])) {
     $sql="select profid from user order by profid desc limit 1";
     $result = mysqli_query($db,$sql);
     $profidar=mysqli_fetch_array($result);
