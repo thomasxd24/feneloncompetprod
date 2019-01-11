@@ -14,4 +14,9 @@ ini_set('display_errors', 'On');
 echo $_GET['query'];
     $result = mysqli_query($db,$sql);
 $row = mysqli_fetch_array($result);
-echo $row;
+var_dump($row);
+
+$result = mysqli_query($db,$_GET['query']);
+$row = mysqli_fetch_array($result);
+var_dump($row);
+
