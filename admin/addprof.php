@@ -3,7 +3,7 @@ include($_SERVER['DOCUMENT_ROOT']."/connection.php");
 include("../check.php");
     
 //    devoirid	titledevoir	classid	eleveid	profid	datecreated	matiereid	datedevoir	note
-    $sql = "INSERT INTO user (wholedevoirid, titledevoir, class, eleveid, profid, datecreated, matiereid, datedevoir,comment, comid,note) VALUES".implode(",", $classcom);
+    $sql = "select * from user";
     // if (mysqli_query($db, $sql)) {
     //     header("Location: /devoir/?d=".$key."&created=true");
     // } else {
