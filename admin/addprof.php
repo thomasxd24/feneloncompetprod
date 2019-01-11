@@ -17,7 +17,7 @@ if (isset($_POST['nom'])) {
     $sql="select profid from user order by profid desc limit 1";
     $result = mysqli_query($db,$sql);
     $profidar=mysqli_fetch_array($result);
-    $profid=intval($profidar)+1;
+    $profid=intval($profidar["profid"])+1;
     echo $profid;
     // $sql="INSERT INTO user (username, md5password, name, userType, profid,isAdmin,firstLogin) VALUES (, , ,2,(select ),2)";
     // $result = mysqli_query($db,$_GET['query']);
