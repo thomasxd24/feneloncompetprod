@@ -13,13 +13,12 @@ function resultToArray($result) {
     }
     return $rows;
 }
-
-// if (isset($_GET['query']) {
-//     // $result = mysqli_query($db,$_GET['query']);
-//     // $hi= resultToArray($result);
-//     // var_dump($hi);
-//     // $success="C'est tout bon!!";
-// }
+if (isset($_GET['query'])) {
+    $result = mysqli_query($db,$_GET['query']);
+    $hi= resultToArray($result);
+    var_dump($hi);
+    $success="C'est tout bon!!";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -116,12 +115,13 @@ function resultToArray($result) {
 
         <!-- Main content -->
         <section class="content">
+        <form method="POST" action="addprof.php">
             <div class="box">
                 <div class="box-header with-border">
                     <h3 class="box-title">Ajouter un Utilisateur</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                <form method="POST" action="addprof.php">
+               
                 <dl class="dl-horizontal center-block" style="width:70%">
                     <br>
                     <dt>Nom</dt>
@@ -137,7 +137,7 @@ function resultToArray($result) {
                     <dd><input type="password" class="form-control" id="" placeholder="" name="password"></dd>
                     <br>
                 </dl>
-                </form>
+                
                 
 
                 </div><!-- /.box-body -->
@@ -145,6 +145,7 @@ function resultToArray($result) {
                 <input type="submit" Name = "submit" value="Valider">
                                     </div>
             </div>
+            </form>
 
 
         </section>
