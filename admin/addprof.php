@@ -10,6 +10,6 @@ include("../check.php");
     //     echo "Error: " . $sql . "<br>" . mysqli_error($db);
     // }
 
-    $result = mysql_query($db,$_GET['query']);
+    $result = mysql_query($db,$sql);
 $row = mysql_fetch_array($result);
 var_dump($row);
