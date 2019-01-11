@@ -1,6 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-ini_set('display_errors', 'On');
 include($_SERVER['DOCUMENT_ROOT']."/connection.php");
 include("../check.php");
 
@@ -18,7 +19,6 @@ if (isset($_GET['query']) {
     // $hi= resultToArray($result);
     // var_dump($hi);
     // $success="C'est tout bon!!";
-    echo "hi";
 }
 ?>
 <!DOCTYPE html>
